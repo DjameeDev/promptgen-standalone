@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Prompt Generator - PromptsAIPro</title>
+    <meta name="description" content="AI-Powered Prompt Generator for music, writing, and print-on-demand content creation">
+    <meta name="theme-color" content="#1a1a2e">
+    
+    <!-- Favicon - PromptsAIPro Logo -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: #0f0f1e;
+            color: #fff;
+            overflow: hidden;
+        }
+        
+        #app-container {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0f0f1e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            font-size: 18px;
+            color: #00d4ff;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">Loading Creative Prompt Generator...</div>
+    <iframe id="app-container" src="https://promptgen-hps2dbyc.manus.space/" title="Creative Prompt Generator"></iframe>
+    
+    <script>
+        // Hide loading message when iframe loads
+        document.getElementById('app-container').onload = function() {
+            const loading = document.querySelector('.loading');
+            if (loading) {
+                loading.style.display = 'none';
+            }
+        };
+        
+        // Set a timeout to hide loading after 5 seconds anyway
+        setTimeout(function() {
+            const loading = document.querySelector('.loading');
+            if (loading) {
+                loading.style.display = 'none';
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
